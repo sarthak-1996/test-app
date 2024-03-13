@@ -7,11 +7,11 @@ pipeline {
     agent any
 
     parameters {
-        string(name: "ImageName", defaultValue: "javapp", descriptions: "name of the docker build")
-        string(name: "ImageTag", defaultValue: "v1", descriptions: "tag of the docker build")
-        string(name: "DockerHubUser", defaultValue: "sarthakxxx03875", descriptions: "name of docker user")
-        string(name: "jfrogServer", defaultValue: "52.87.164.162", descriptions: "IP of Jfrog server")
-        choice(name: "action", choices: "create\ndestroy", descriptions: "Choose create/Destroy")
+        string(name: "ImageName", defaultValue: "javapp", description: "name of the docker build")
+        string(name: "ImageTag", defaultValue: "v1", description: "tag of the docker build")
+        string(name: "DockerHubUser", defaultValue: "sarthakxxx03875", description: "name of docker user")
+        string(name: "jfrogServer", defaultValue: "52.87.164.162", description: "IP of Jfrog server")
+        choice(name: "action", choices: "create\ndestroy", description: "Choose create/Destroy")
     }
 
     stages {

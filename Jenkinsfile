@@ -1,4 +1,4 @@
-@Library('my_shared_library') _
+@Library('my-shared-library') _
 
 
 
@@ -20,7 +20,7 @@ pipeline {
             steps{
                 gitCheckout(
                     branch : "main",
-                    url : "https://github.com/sarthak-1996/test-app.git"
+                    url : "https://github.com/sarthak-1996/HeyDevops-Java_app_3.0.git"
                 )
             }
         }

@@ -18,10 +18,10 @@ pipeline {
         stage("Git Checkout"){
             when { expression {params.action == 'create'}}
             steps{
-                gitCheckout {
+                gitCheckout (
                     branch : "main",
                     url: "https://github.com/sarthak-1996/test-app.git"
-                }
+                )
             }
         }
         stage ("Unit Test : Maven") {

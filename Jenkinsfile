@@ -76,7 +76,7 @@ pipeline {
                 }
             }
         }
-        stages("Build Image : Docker"){
+        stage("Build Image : Docker"){
             when {expression {params.action == 'create'}}
             steps{
                 script{

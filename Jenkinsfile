@@ -102,11 +102,12 @@ pipeline {
         }
         stage("Image Cleanup: Docker"){
             when {expression {params.action == 'create'}}
-            stage{
+            steps{
                 script{
                     cleanImage("${params.DockerHubUser}", "${params.ImageName}")
                 }
             }
         }
     }
+    
 }
